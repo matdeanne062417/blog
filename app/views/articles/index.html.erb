@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <%# iterate %>
+        <%@articles.each do |article| %>
+            <tr>
+                <%# print %>
+                <td><%= article.id %></td>
+                <td><%= article.name %></td>
+                <td><%= article.body %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
