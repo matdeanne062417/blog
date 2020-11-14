@@ -16,7 +16,9 @@ class ArticlesController < ApplicationController
     def create
         # tatanggapin kung ano yung sinubmit ng user natin
         @article = Article.new(article_params)
-        if article.save
+        # @article.name = params[:article][:name]
+        # @article.body = params[:article][:body]
+        if @article.save
             redirect_to articles_path
         else
             render :new
