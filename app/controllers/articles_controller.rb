@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
     end
 
     def show
+        @article = Article.find(params[:id])
     end
 
     def new
@@ -26,12 +27,29 @@ class ArticlesController < ApplicationController
     end
 
     def edit
+        # @article = Article.find(id)
+        # @article.name = params[:article][:name]
+        # @article.body = params[:article][:body]
+        # @article.save
+        @article = Article.find(params[:id])
+        
     end
 
     def update
+        @article = Article.find(params[:id])
+        
+         if @article.update(article_params)
+             redirect_to articles_path
+         else
+             render :edit
+         end
     end
 
     def delete
+        # @article = Article. #parameter you want to delete
+        # @article.destroy
+        @article = Article.find(params[:id]).destroy
+        redirect_to articles_path
     end
 
     private

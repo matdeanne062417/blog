@@ -1,9 +1,10 @@
 <table>
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Body</th>
+            <th><h1>ID</h1></th>
+            <th><h1>Name</h1></th>
+            <th><h1>Body</h1></th>
+            
         </tr>
     </thead>
 
@@ -13,8 +14,11 @@
             <tr>
                 <%# print %>
                 <td><%= article.id %></td>
-                <td><%= article.name %></td>
+                <td><b><%= article.name %></b></td>
                 <td><%= article.body %></td>
+                <td><%= link_to 'Edit', edit_article_path(article.id) %></td>
+                <td><%= link_to 'Show',show_article_path(article.id) %></td>
+                <td><%= link_to 'Delete', delete_article_path(article.id) %></td>
             </tr>
         <% end %>
     </tbody>
