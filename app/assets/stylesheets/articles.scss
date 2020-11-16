@@ -1,3 +1,76 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    background-color: #fff;
+    color: #333;
+    width: 50%;
+    margin: 10% 25%;
+    background-size: cover;
+    background-position: center; 
+    background-image: url(https://cdn.shopify.com/s/files/1/0572/9069/products/aj_Sky_large.jpg?v=1471813006);
+}
+  
+body, p, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px; 
+}
+  
+a {
+    color: #000; 
+}
+  
+a:visited {
+    color: rgb(38, 78, 207); 
+}
+  
+a:hover {
+    color: rgb(219, 14, 14);
+}
+
+table {
+    border: 2px solid black;
+    border-radius: 2%;
+    margin-bottom: 100px;
+    background-color: white;
+    opacity: 80%;
+}
+  
+th {
+    border-bottom: dotted;
+    padding-bottom: 5px;
+}
+
+td {
+    border-bottom: dotted;
+    padding: 0 5px 7px; 
+}
+
+#article-body {
+    text-indent: 10%;
+}
+
+.field_with_errors {
+  padding: 2px;
+  color: red;
+  font-weight: bold;
+  display: table; 
+}
+
+#error_explanation {
+  width: 450px;
+  color: #c00;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  
+}
+
+#error_explanation ul li {
+    color: #c00;
+    font-size: 12px;
+    // list-style: square; 
+}
+
+label {
+  display: block; }

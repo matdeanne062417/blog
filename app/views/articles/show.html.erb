@@ -8,5 +8,5 @@
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article.id) %>
-<%= link_to 'Delete', delete_article_path(@article.id) %>
+<%= link_to 'Delete', delete_article_path(@article.id), data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back to Article',articles_path %>

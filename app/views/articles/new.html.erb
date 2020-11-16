@@ -1,9 +1,10 @@
 <%# idedeclare kung san pupunta ung action natin %>
 <%# equivalent ng html %>
+<h1>Create New Article</h1>
 <%= form_with scope: :article, url: create_article_path, local: true do |f| %>
 <p>
     <% if @article.errors.any? %>
-        <ul>
+        <ul id = "error_explanation">
             <% @article.errors.full_messages.each do |message| %>
              <li>
                 <%= message%>

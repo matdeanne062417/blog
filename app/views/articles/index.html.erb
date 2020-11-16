@@ -1,10 +1,13 @@
+<h1>ARTICLES</h1>
 <table>
     <thead>
         <tr>
-            <th><h1>ID</h1></th>
-            <th><h1>Name</h1></th>
-            <th><h1>Body</h1></th>
-            
+            <th><h6>ID</h6></th>
+            <th><h2>Name</h2></th>
+            <th><h2>Body</h2></th>
+            <th><h2> </h2></th>
+            <th><h2> </h2></th>
+            <th><h2> </h2></th>
         </tr>
     </thead>
 
@@ -13,14 +16,14 @@
         <%@articles.each do |article| %>
             <tr>
                 <%# print %>
-                <td><%= article.id %></td>
-                <td><b><%= article.name %></b></td>
-                <td><%= article.body %></td>
+                <td id = "article-id"><%= article.id %></td>
+                <td id = "article-name"><b><%= article.name %></b></td>
+                <td id = "article-body"><%= article.body %></td>
                 <td><%= link_to 'Edit', edit_article_path(article.id) %></td>
                 <td><%= link_to 'Show',show_article_path(article.id) %></td>
-                <td><%= link_to 'Delete', delete_article_path(article.id) %></td>
+                <td><%= link_to 'Delete', delete_article_path(article.id), data: { confirm: 'Are you sure?' } %></td>
             </tr>
         <% end %>
     </tbody>
 </table>
-<%= link_to 'New Article',new_article_path %>
+<%= link_to 'Create New Article',new_article_path %>

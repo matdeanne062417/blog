@@ -1,3 +1,4 @@
+<h1>Edit Page</h1>
 <%= form_with scope: :article, url: update_article_path, method: :patch do |f| %>
 <p>
     <% if @article.errors.any? %>
@@ -28,3 +29,5 @@
 </p>
 
 <% end %>
+
+<%= link_to 'Back',articles_path %>
