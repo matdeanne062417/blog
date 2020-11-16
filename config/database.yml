@@ -22,4 +22,5 @@ test:
 
 production:
   <<: *default
+  adapter: postregsql
   database: db/blog_production.sqlite3
