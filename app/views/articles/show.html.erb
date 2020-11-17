@@ -1,12 +1,14 @@
 <h1><%= @article.name %></h1>
             
 <%# print %>
-<p>
+<p class = "content">
 
-<%= @article.body %>
+    <%= @article.body %>
 
 </p>
 
-<%= link_to 'Edit', edit_article_path(@article.id) %>
-<%= link_to 'Delete', delete_article_path(@article.id), data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back to Article',articles_path %>
+<div class = "btn-links">
+    <%= link_to 'Edit', edit_article_path(@article.id) %>
+    <%= link_to 'Delete', delete_article_path(@article.id), data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Back to Article',articles_path %>
+</div>

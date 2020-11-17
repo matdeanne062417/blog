@@ -29,7 +29,7 @@ a:hover {
     color: rgb(219, 14, 14);
 }
 
-table {
+.content {
     border: 2px solid black;
     border-radius: 2%;
     margin-bottom: 100px;
@@ -68,9 +68,13 @@ td {
 
 #error_explanation ul li {
     color: #c00;
-    font-size: 12px;
-    // list-style: square; 
+    font-size: 12px; 
 }
 
 label {
   display: block; }
+
+.btn-links{
+    font-size: 20px;
+    
+}
